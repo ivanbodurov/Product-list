@@ -11,7 +11,7 @@ app.controller("myCtrl", function($scope) {
             document.getElementById('new-product').value = "";
 
         } else {
-            $scope.errortext = "Вече има такъв продукт.";
+            $scope.errortext = "Моля, въведете нов продукт!";
         }
     }
     $scope.removeItem = function (x) {
