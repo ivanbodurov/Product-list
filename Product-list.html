@@ -5,28 +5,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <body>
 
-<script>
-// Списък с продукти на AngularJS
-var app = angular.module("myShoppingList", []);
-app.controller("myCtrl", function($scope) {
-    $scope.products = ["Хляб", "Сирене", "Кисело мляко", "Сапун", "Паста за зъби", "Яйца", "Душгел", "Маслини", "Маргарин", "Кашкавал", "Лютеница", "Прясно мляко", "Кайма"];
-    $scope.addItem = function () {
-        $scope.errortext = "";
-        if (!$scope.addMe) {return;}
-        if ($scope.products.indexOf($scope.addMe) == -1) {
-            $scope.products.push($scope.addMe);
-            document.getElementById('new-product').value = "";
-
-        } else {
-            $scope.errortext = "Вече има такъв продукт.";
-        }
-    }
-    $scope.removeItem = function (x) {
-        $scope.errortext = "";
-        $scope.products.splice(x, 1);
-    }
-});
-</script>
 
   <div style="position:relative;width: 23%;left: 700px" ng-app="myShoppingList" ng-cloak ng-controller="myCtrl" class="w3-card-2 w3-margin" style="max-width:400px;">
     <header class="w3-container w3-light-grey w3-padding-16">
@@ -48,6 +26,6 @@ app.controller("myCtrl", function($scope) {
     </div>
   </div>
 
-
+<script src='product-list.js'></script>
 </body>
 </html>
